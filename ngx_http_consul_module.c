@@ -131,7 +131,7 @@ static ngx_int_t ngx_http_consul_init_process(ngx_cycle_t *cycle) {
     cmcf = ngx_http_cycle_get_module_main_conf(cycle, ngx_http_consul_module);
 
     // loads shared library
-    handle = dlopen("/home/karzio/ngx_http_new_module/goCode/goConcurrentServices.so", RTLD_LAZY);
+    handle = dlopen("/usr/local/nginx/goCode/goConcurrentServices.so", RTLD_LAZY);
     if (!handle) {
         ngx_log_error(NGX_LOG_ERR, cycle->log, 0, "Failed to load shared library: %s", dlerror());
         return NGX_ERROR;
